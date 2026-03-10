@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<script>
+    // URL for the GET request (you can replace with any valid JSON API)
+    const url = "https://jsonplaceholder.typicode.com/users/1";
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("HTTP error! Status: " + response.status);
+            }
+            return response.json(); // Parse JSON
+        })
+        .then(data => {
+            console.log("JSON Response:");
+            for (const key in data) {
+                console.log(`${key}: ${data[key]}`);
+            }
+        })
+        .catch(error => {
+            console.error("Error occurred:", error.message);
+        });
+
+
+</script>
+
+<body>
+    <!-- <form action="/server">
+        <h1>Registration Form</h1>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <div>
+        <label for="gender">please select gender</label>
+        <select name="gender" id="gender">
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            </select>
+            </div>
+            <div>
+            Do you agree all of service?
+            <input type="checkbox" id="agree" value="agree">
+            <label for="agree">Yes,I agree</label>
+        <button type="submit">register</button>
+        </div>
+    </form> -->
+
+
+    <!-- <line x1="100" y1="10" x2="200" y2="200" stroke="blue" stroke-width="3" />
+        <circle cx="50" cy="50" r="50" stroke="black" stroke-width="3" fill="red"></circle>
+        <rect x="50" y="20" width="200px" height="100px" stroke="YEllow" stroke-width="3" fill="cyan"
+        ></rect> -->
+    <!-- <polygon points="100,10,175,150,20,50,175,50,20,150" stroke="black" stroke-width="3" fill="white"></polygon>
+        -->
+    <!-- <svg width="400" height="240"> -->
+    <!-- Outer black border -->
+    <!-- <rect x="0" y="0" width="400" height="240" stroke="black" stroke-width="2" fill="none" />
+
+            Tricolor stripes -->
+    <!-- <rect x="0" y="0" width="400" height="80" fill="orange" />
+            <rect x="0" y="80" width="400" height="80" fill="white" />
+            <rect x="0" y="160" width="400" height="80" fill="green" /> -->
+
+    <!-- Ashok Chakra (simple circle) -->
+    <!-- <circle cx="200" cy="120" r="30" fill="blue" stroke="black" stroke-width="2" /> --> -->
+    <!-- </svg> -->
+
+    <!-- <svg width="200" height="200">
+        <!-- Orange circle background -->
+    <!-- <circle cx="100" cy="100" r="80" fill="orange" /> -->
+
+    <!-- Star over circle -->
+    <!-- <polygon points="100,20 117,80 180,80 130,120 150,180 100,140 50,180 70,120 20,80 83,80" fill="white"
+            stroke="black" stroke-width="2" /> -->
+
+    <!-- Text "SUN" in center -->
+    <!-- <text x="100" y="110" font-size="20" text-anchor="middle" fill="black" font-family="Arial">SUN</text>
+    </svg>  -->
+
+    <!-- </svg> -->
+</body>
+
+</html>
